@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+    <style>
+      .span {
+        font-weight: 500;
+        font-style: italic;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+      .battery {
+        margin-top: 8px;
+        width: 60px;
+        height: 70%;
+        background-color: #ccc;
+        border-radius: 5px;
+        position: relative;
+      }
+
+      .battery-fill {
+        font-weight: 800;
+        height: 100%;
+
+        background-color: #3eff3e;
+        border-radius: 5px;
+        position: absolute;
+        text-align: center;
+        padding-top: 4px;
+        top: 0;
+        left: 0;
+        animation: fillAnimation 2s ease-in-out infinite;
+      }
+
+      @keyframes fillAnimation {
+        0%,
+        100% {
+          transform: scaleY(1);
+        }
+        50% {
+          transform: scaleY(0.9);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="modal modal-sheet position-static d-block p-5 py-md-5" tabindex="-1" role="dialog" id="modalTour">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content rounded-4 shadow bg-body-secondary">
+          <div class="modal-body p-5">
+            <h2 class="fw-bold mb-0">Battery Details</h2>
+
+            <ul class="d-grid gap-4 my-5 list-unstyled small">
+              <li class="d-flex gap-4">
+                <div class="battery">
+                  <div class="battery-fill" id="battery-fill"></div>
+                </div>
+                <div>
+                  <h5 class="mb-0">Battery Charging</h5>
+                  <span class="battery-percentage span"> Yes </span>
+                </div>
+              </li>
+              <li class="d-flex gap-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" fill="currentColor" class="bi bi-battery-charging" viewBox="0 0 16 16">
+                  <path d="M9.585 2.568a.5.5 0 0 1 .226.58L8.677 6.832h1.99a.5.5 0 0 1 .364.843l-5.334 5.667a.5.5 0 0 1-.842-.49L5.99 9.167H4a.5.5 0 0 1-.364-.843l5.333-5.667a.5.5 0 0 1 .616-.09z" />
+                  <path d="M2 4h4.332l-.94 1H2a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h2.38l-.308 1H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z" />
+                  <path d="M2 6h2.45L2.908 7.639A1.5 1.5 0 0 0 3.313 10H2V6zm8.595-2-.308 1H12a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H9.276l-.942 1H12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.405z" />
+                  <path d="M12 10h-1.783l1.542-1.639c.097-.103.178-.218.241-.34V10zm0-3.354V6h-.646a1.5 1.5 0 0 1 .646.646zM16 8a1.5 1.5 0 0 1-1.5 1.5v-3A1.5 1.5 0 0 1 16 8z" />
+                </svg>
+                <div>
+                  <h5 class="mb-0">Battery Is Charging</h5>
+                  <span class="battery-is-charge span"> Yes </span>
+                </div>
+              </li>
+              <li class="d-flex gap-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" fill="currentColor" class="bi bi-hourglass-split" viewBox="0 0 16 16">
+                  <path
+                    d="M2.5 15a.5.5 0 1 1 0-1h1v-1a4.5 4.5 0 0 1 2.557-4.06c.29-.139.443-.377.443-.59v-.7c0-.213-.154-.451-.443-.59A4.5 4.5 0 0 1 3.5 3V2h-1a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-1v1a4.5 4.5 0 0 1-2.557 4.06c-.29.139-.443.377-.443.59v.7c0 .213.154.451.443.59A4.5 4.5 0 0 1 12.5 13v1h1a.5.5 0 0 1 0 1h-11zm2-13v1c0 .537.12 1.045.337 1.5h6.326c.216-.455.337-.963.337-1.5V2h-7zm3 6.35c0 .701-.478 1.236-1.011 1.492A3.5 3.5 0 0 0 4.5 13s.866-1.299 3-1.48V8.35zm1 0v3.17c2.134.181 3 1.48 3 1.48a3.5 3.5 0 0 0-1.989-3.158C8.978 9.586 8.5 9.052 8.5 8.351z"
+                  />
+                </svg>
+                <div>
+                  <h5 class="mb-0">Discharge Time</h5>
+                  <span class="charging-time span"> Yes </span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  </body>
+</html>

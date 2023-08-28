@@ -1,0 +1,29 @@
+.show-products {
+  background-image: url("images/portfolio-background.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: grid;
+  grid-template-columns: 3fr 9fr;
+  height: 700px;
+}
+.show-products .product-navigation {
+  border-right: 2px double black;
+  padding-left: 30%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.show-products .product-container {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.product-container {
+  display: grid;
+  grid-template-columns: 4fr 4fr;
+  padding-left: 50px;
+
+  overflow-y: scroll;
+}
+
+nav ul li img {
+  width: 50px;
+}
