@@ -1,0 +1,127 @@
+.dentist-appointment-container {
+  background-color: rgba(0, 180, 230, 0.9);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  padding: 5%;
+}
+
+.dentist-appointment-container h1 {
+  font-size: 40px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-variant: small-caps;
+}
+
+.dentist-appointment-container h3 {
+  font-size: 20px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-variant: small-caps;
+}
+
+.dentist-appointment-container .div2 {
+  padding-top: 20px;
+}
+
+.dentist-appointment-container a {
+  background-color: rgb(255, 255, 255);
+  color: #00bcd4;
+  text-decoration: none;
+  padding-top: 20px;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 10px;
+}
+
+.doctor-details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  background-color: rgb(228, 228, 228);
+  padding-top: 30px;
+  padding-left: 50px;
+  padding-bottom: 30px;
+}
+
+.doctor-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  background-color: rgb(241, 241, 241);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.doctor-details .doctor-info .doctor-img {
+  background-color: rgb(216, 216, 216);
+  padding: 10px;
+  border-radius: 50% 5% 50% 50%;
+}
+
+.doctor-details .doctor-info .doctor-img img {
+  width: 200px;
+  border-radius: 50% 0 50% 50%;
+}
+
+.doctor-details .doctor-info ul li {
+  margin-right: 20px;
+}
+
+.doctor-details .doctor-info h3 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 25px;
+  font-variant: small-caps;
+}
+
+.doctor-details .doctor-info h5 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+.doctor-details .doctor-info p {
+  text-align: center;
+}
+
+.doctor-info:hover {
+  background-color: #00bcd4;
+  color: white;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .dentist-appointment-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dentist-appointment-container h1 {
+    font-size: 30px;
+  }
+
+  .dentist-appointment-container h3 {
+    font-size: 18px;
+  }
+
+  .dentist-appointment-container a {
+    margin-top: 20px;
+  }
+
+  .doctor-details {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .doctor-info {
+    margin-bottom: 20px;
+  }
+}
