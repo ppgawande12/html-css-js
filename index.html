@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+    <style>
+      li {
+        list-style: circle;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 10px 0;
+      }
+      .main-container {
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        justify-content: center;
+        align-items: center;
+        margin: 20px auto;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <form class="w-100" id="form-task">
+        <h1>To-Do-List</h1>
+        <div class="input-group">
+          <input type="text" class="form-control" id="input-task" placeholder="Enater Task" />
+          <button type="submit" class="btn btn-success" id="button-task">Add Task</button>
+        </div>
+        <h2 style="margin-top: 20px">Task List</h2>
+        <hr />
+      </form>
+      <ul id="list-task" class="list-group w-100"></ul>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  </body>
+</html>
