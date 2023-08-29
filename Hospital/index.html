@@ -121,40 +121,74 @@
       <div class="appointment-container-1">
         <h6>We are here for you</h6>
         <h1>Make An Appointment</h1>
-        <form>
+        <form class="appointment-form">
           <div>
             <label for="name">Your Full Name</label>
-            <input type="text" name="name" id="name" />
+            <input type="text" name="name" id="name" required />
           </div>
           <div>
             <label for="email">Email</label>
-            <input type="email" name="email" id="email" />
+            <input type="email" name="email" id="email" required />
           </div>
           <div>
             <label for="phone">Phone Number</label>
-            <input type="number" name="phone" id="phone" />
+            <input type="number" name="phone" id="phone" required />
           </div>
           <div>
             <label for="a-date">Apointment Date</label>
-            <input type="date" name="a-date" id="a-date" />
+            <input type="date" name="a-date" id="a-date" required />
           </div>
           <div>
             <label for="a-date">Apointment Time</label>
-            <input type="time" name="a-time" id="a-time" />
+            <input type="time" name="a-time" id="a-time" required />
           </div>
           <div>
             <label for="doctor">Select A Doctor</label>
-            <select name="doctor" id="doctor">
+            <select name="doctor" id="doctor" required>
               <option disabled selected>Select A Doctor</option>
-              <option value="pavan">Dr. Pavan</option>
-              <option value="pavan">Dr. Disha</option>
-              <option value="pavan">Dr. Ganesh</option>
+              <option value="Dr. Pavan">Dr. Pavan</option>
+              <option value="Dr. Disha">Dr. Disha</option>
+              <option value="Dr. Ganesh">Dr. Ganesh</option>
             </select>
           </div>
           <div></div>
-          <div><button id="book-appointment" class="book-appointment">Book An Apointment</button></div>
+          <div><button type="submit" id="book-appointment" class="book-appointment" data-bs-toggle="modal" data-bs-target="#myModal">Book An Apointment</button></div>
         </form>
       </div>
+
+      <!-- modal -->
+      <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Appointment Details</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="appointment-details">
+              <div class="details-container">
+                <label>Name </label>
+                <p id="showName"></p>
+
+                <label>Email </label>
+                <p id="showEmail"></p>
+                <label>Phone Number </label>
+                <p id="showPhone"></p>
+                <label>Date </label>
+                <p id="showDate"></p>
+                <label>Time </label>
+                <p id="showTime"></p>
+                <label>Doctor </label>
+                <p id="showDoctor"></p>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="conformbtn">Conform</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="appointment-container-2">
         <h6>LEARN ANYTHING</h6>
         <h1>We Offer Best Dental Services</h1>
@@ -181,6 +215,8 @@
         </div>
       </div>
     </section>
+
+    <!-- patient details/data -->
 
     <section class="patients-data-container">
       <div class="patients-data-container-1">
@@ -284,6 +320,8 @@
         </div>
       </footer>
     </div>
+
+    <script src="index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
   </body>
 </html>
