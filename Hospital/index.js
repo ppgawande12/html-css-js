@@ -3,9 +3,19 @@ const appointmentDetails = document.getElementById("appointment-details");
 const bookAppointment = document.getElementById("book-appointment");
 const showAppointment = document.getElementsByClassName("showAppointment");
 const conformbtn = document.getElementById("conformbtn");
-bookAppointment.addEventListener("click", function (e) {
+
+appointmentForm.addEventListener("submit", function (e) {
   e.preventDefault();
+  document.getElementById("myModal").classList.add("show");
+  document.getElementById("myModal").style.display = "block";
   showDetails();
+});
+
+document.querySelectorAll('[data-bs-dismiss="modal"]').forEach(function (element) {
+  element.addEventListener("click", function () {
+    document.getElementById("myModal").classList.remove("show");
+    document.getElementById("myModal").style.display = "none";
+  });
 });
 
 conformbtn.addEventListener("click", () => {
